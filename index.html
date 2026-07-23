@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiranjeevi Goli — Signals to Systems</title>
+  <meta name="description" content="Chiranjeevi Goli — Data automation, embedded test engineering, and applied AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="spine" aria-hidden="true">
+    <svg viewBox="0 0 100 3000" preserveAspectRatio="none">
+      <path class="spine-path secondary" d="M50,0 L50,3000" />
+      <path id="tracepath" class="spine-path" d="M50,0 L50,3000" />
+    </svg>
+  </div>
+
+  <header>
+    <nav class="wrap">
+      <div class="logo">CHIRANJEEVI GOLI</div>
+      <ul class="navlinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#now">Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="navactions">
+        <button class="kbdhint" id="paletteHint" aria-label="Open command palette">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+          <span>Ctrl K</span>
+        </button>
+        <a class="btn" href="mailto:chiru8939@gmail.com">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag"><span class="dot"></span> GRADUATE APPRENTICE · VOLVO GROUP · DATA & TEST AUTOMATION
+          </div>
+          <h1 class="headline">Bridging the gap between physical <span class="hl">hardware</span> and intelligent
+            automation.</h1>
+          <p class="hero-sub">Electronics engineer experienced in hardware test rigs, CAN/LIN networks, and CAPL
+            automation. I build Python utilities to streamline testing workflows and recently developed a
+            retrieval-based AI (RAG) agent. Actively seeking new opportunities.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#work">View the Work →</a>
+            <a class="btn" href="https://github.com/chiranjeevigoli" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="btn" href="#contact">Get Resume</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="hero-image-inner">
+            <img src="images/myprofilepicture.jpeg" alt="Chiranjeevi Goli" class="hero-img">
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator"><span>SCROLL</span><span class="line"></span></div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="eyebrow">About</div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <h2>Not a biography. A working method.</h2>
+            <p>I started in <strong>Electronics and Communication Engineering</strong> — signals, protocols, the
+              physical layer of how machines talk to each other. That background changed how I think about software: I
+              don't trust a system until I've seen the data move through it end to end.</p>
+            <p>At Volvo, that meant building the invisible layer around test engineers — Excel specs that turn
+              themselves into CAPL scripts, CAN/LIN configurations that get validated before they can break something
+              expensive, multi-channel test rigs that run unattended overnight instead of needing someone at a bench.
+            </p>
+            <p>Outside that, I build with AI the same way I build test automation: <strong>not as a demo, but as
+                infrastructure</strong>. A RAG assistant is only useful if it knows when it doesn't know — so I spend
+              more time on the retrieval-confidence logic than on the chat UI around it.</p>
+            <p>My edge isn't that I know Python and I know CAN networks. It's that I've debugged systems where a wrong
+              assumption costs someone a day in a lab — so I build software the same way: verify first, automate second,
+              trust nothing by default.</p>
+          </div>
+          <div class="principles">
+            <div class="principle">
+              <div class="chtag">01</div>
+              <div>
+                <h4>Verify before you automate</h4>
+                <p>Every automation I've shipped replaced a manual check — never removed it.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <div class="chtag">02</div>
+              <div>
+                <h4>Confidence over completeness</h4>
+                <p>An AI system that says "I'm not sure" is more useful than one that guesses.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <div class="chtag">03</div>
+              <div>
+                <h4>Build for the person at 2am</h4>
+                <p>Test rigs and data tools should work when nobody's there to babysit them.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <div class="chtag">04</div>
+              <div>
+                <h4>Learn by shipping</h4>
+                <p>Every project below was built to solve a real, specific problem — not to pad a resume.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="eyebrow">Selected Work</div>
+        <h2>Three systems, three different problems.</h2>
+        <p class="lede">Each one below started as a manual bottleneck. Click to expand the problem, the build, and what
+          changed.</p>
+
+        <div class="project" data-open="false">
+          <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+            <div>
+              <div class="project-title">FleetMind AI</div>
+              <div class="project-stack">Python · RAG · ChromaDB · Sentence Transformers · Gemini API · LangChain</div>
+            </div>
+            <div class="project-toggle">+</div>
+          </div>
+          <div class="project-body">
+            <div class="project-body-inner">
+              <div class="pb-block">
+                <h5>Problem</h5>
+                <p>Heavy-duty fleet maintenance manuals run thousands of pages. Technicians troubleshooting in the field
+                  can't search that fast enough, and a wrong guess is expensive.</p>
+              </div>
+              <div class="pb-block">
+                <h5>Architecture</h5>
+                <p>PyMuPDF + LangChain ingestion pipeline chunking and embedding manuals into a ChromaDB vector store,
+                  queried through a Streamlit interface backed by the Gemini API.</p>
+              </div>
+              <div class="pb-block">
+                <h5>The hard part</h5>
+                <p>Generic RAG answers confidently even when retrieval is weak. I built an agentic routing layer that
+                  scores retrieval confidence and triggers a clarifying question instead of a guess when a query is
+                  ambiguous.</p>
+              </div>
+              <div class="pb-block">
+                <h5>Result</h5>
+                <p>1,212 pages indexed into 3,795 semantic chunks, with measurably fewer incorrect answers thanks to the
+                  confidence-routing layer.</p>
+              </div>
+              <div class="pb-block pb-full">
+                <h5>Lesson learned</h5>
+                <p>The interesting engineering in RAG isn't the retrieval — it's deciding when NOT to answer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project" data-open="false">
+          <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+            <div>
+              <div class="project-title">AI Data Analyst Agent</div>
+              <div class="project-stack">Python · Streamlit · Gemini API · SQLAlchemy · MySQL</div>
+            </div>
+            <div class="project-toggle">+</div>
+          </div>
+          <div class="project-body">
+            <div class="project-body-inner">
+              <div class="pb-block">
+                <h5>Problem</h5>
+                <p>Non-technical stakeholders had CSV data and questions, but no SQL. Every ad-hoc question meant
+                  waiting on someone else's query.</p>
+              </div>
+              <div class="pb-block">
+                <h5>Architecture</h5>
+                <p>Automated schema detection translates plain-English questions into SQL, executed live against MySQL
+                  through SQLAlchemy, with results rendered as text or auto-generated charts.</p>
+              </div>
+              <div class="pb-block">
+                <h5>The hard part</h5>
+                <p>Follow-up questions ("now break that down by month") need session context — I added context-aware
+                  handling so the agent remembers prior questions within a session.</p>
+              </div>
+              <div class="pb-block">
+                <h5>Result</h5>
+                <p>Upload any CSV, ask in plain English, get a query-backed answer with a chart — no SQL required.</p>
+              </div>
+              <div class="pb-block pb-full">
+                <h5>Lesson learned</h5>
+                <p>Natural-language-to-SQL is only trustworthy if the schema detection is bulletproof — most failures
+                  traced back there, not the language model.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project" data-open="false">
+          <div class="project-head" role="button" tabindex="0" aria-expanded="false">
+            <div>
+              <div class="project-title">Asset Management System</div>
+              <div class="project-stack">Python · FastAPI · SQLAlchemy · MySQL · Pydantic</div>
+            </div>
+            <div class="project-toggle">+</div>
+          </div>
+          <div class="project-body">
+            <div class="project-body-inner">
+              <div class="pb-block">
+                <h5>Problem</h5>
+                <p>Needed a clean reference implementation of a full CRUD system with real request validation — the kind
+                  of foundation every internal tool ends up needing.</p>
+              </div>
+              <div class="pb-block">
+                <h5>Architecture</h5>
+                <p>REST API built on FastAPI with SQLAlchemy models and Pydantic request validation, using
+                  dependency-injected database sessions for testable, isolated endpoints.</p>
+              </div>
+              <div class="pb-block">
+                <h5>The hard part</h5>
+                <p>Getting session management right so endpoints stay testable in isolation rather than depending on
+                  global state.</p>
+              </div>
+              <div class="pb-block">
+                <h5>Result</h5>
+                <p>A complete, reliable CRUD API — the pattern I now reuse as a starting point for backend work.</p>
+              </div>
+              <div class="pb-block pb-full">
+                <h5>Lesson learned</h5>
+                <p>Boring, well-structured CRUD is a skill in itself — most production bugs live in the "obvious"
+                  endpoints.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-family:var(--mono); font-size:13px; color:var(--text-faint); margin-top:20px;">Full source for
+          all three: <a href="https://github.com/chiranjeevigoli" target="_blank" rel="noopener"
+            style="color:var(--accent-2); text-decoration:underline;">github.com/chiranjeevigoli</a></p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="eyebrow">Skills</div>
+        <h2>What I actually solve problems with.</h2>
+        <p class="lede">A breakdown of my technical stack, domain expertise, and the tools I use to build systems.</p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h4>Programming & Data Analysis</h4>
+            <div class="skill-tags">
+              <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Pandas</span>
+              <span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Statistical
+                Analysis</span>
+              <span class="tag">C</span><span class="tag">CAPL</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h4>AI & Machine Learning</h4>
+            <div class="skill-tags">
+              <span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">Semantic Search</span>
+              <span class="tag">Vector Embeddings</span><span class="tag">Prompt Engineering</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h4>Databases & Backend Development</h4>
+            <div class="skill-tags">
+              <span class="tag">FastAPI</span><span class="tag">MySQL</span><span class="tag">SQLAlchemy</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h4>Engineering Domain Knowledge</h4>
+            <div class="skill-tags">
+              <span class="tag">Basic Electronics</span><span class="tag">CAN</span><span class="tag">LIN</span><span
+                class="tag">TCP/IP</span>
+              <span class="tag">DBC/LDF Configuration</span><span class="tag">ECUs</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h4>Tools & Platforms</h4>
+            <div class="skill-tags">
+              <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span>
+              <span class="tag">Postman</span><span class="tag">Excel</span><span class="tag">Vector CANoe</span>
+              <span class="tag">Jira</span><span class="tag">ET tool</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h4>AI Tools</h4>
+            <div class="skill-tags">
+              <span class="tag">Claude</span><span class="tag">ChatGPT</span><span class="tag">Google AI Studio</span>
+            </div>
+          </div>
+          <div class="skill-card soft-skills">
+            <h4>Soft Skills</h4>
+            <div class="skill-tags">
+              <span class="tag">Adaptability</span><span class="tag">Attention to Detail</span>
+              <span class="tag">Problem Solving</span><span class="tag">Ownership & Accountability</span>
+              <span class="tag">Learn-by-Doing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="eyebrow">Experience</div>
+        <h2>Impact, not job titles.</h2>
+        <div class="exp-block">
+          <div class="exp-role">Graduate Apprentice Trainee — Data Automation & Test Engineering</div>
+          <div class="exp-meta">Volvo Group India Pvt. Ltd. · May 2025 – May 2026</div>
+          <div class="exp-qas">
+            <div class="qa">
+              <h5>What problem existed</h5>
+              <p>Test engineers were manually converting Excel specs into CAPL scripts and setting up multi-channel test
+                runs by hand — slow, error-prone, and impossible to scale across parallel rigs.</p>
+            </div>
+            <div class="qa">
+              <h5>What I built</h5>
+              <p>Python utilities that parse Excel specs, run engineering unit conversions, and auto-generate CAPL calls
+                — plus Excel-driven automation for multi-channel test execution.</p>
+            </div>
+            <div class="qa">
+              <h5>Why it mattered</h5>
+              <p>Manual scripting and test setup time each dropped by roughly <strong>90%</strong>, and the workflow
+                became scalable across parallel test runs instead of bottlenecked on one person.</p>
+            </div>
+            <div class="qa">
+              <h5>What changed</h5>
+              <p>I also independently implemented TCP/IP socket communication in CANoe via CAPL to integrate an external
+                DC power supply, and built a tool converting Excel configs into Neware XML — enabling simultaneous
+                execution across 8 test channels.</p>
+            </div>
+          </div>
+          <p style="font-size:14.5px; color:var(--text-muted); max-width:720px;">Also owned CAN/LIN network
+            configuration (DBC/LDF authoring and validation), ECU flashing, and laboratory
+            operations across oscilloscopes, multimeters, and programmable power supplies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="now">
+      <div class="wrap">
+        <div class="eyebrow">Open Source & Now</div>
+        <h2>Live from GitHub.</h2>
+        <p class="lede">Pulled directly from the GitHub API when this page loads — not staged numbers.</p>
+        <div class="now-grid">
+          <div class="stat-card">
+            <div class="stat-num" id="statRepos">—</div>
+            <div class="stat-label">Public repos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statFollowers">—</div>
+            <div class="stat-label">Followers</div>
+          </div>
+        </div>
+        <ul class="repo-list" id="repoList">
+          <li>Loading recent repositories…</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="eyebrow">Contact</div>
+        <h2>Say Hello.</h2>
+        <p class="lede">Open to roles in data automation, backend, and applied AI. The fastest way to reach me is email.
+        </p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:chiru8939@gmail.com">
+            <div class="contact-card-header">
+              <div class="contact-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </div>
+              <div class="label">Email</div>
+            </div>
+            <div class="value">chiru8939@gmail.com</div>
+          </a>
+          <a class="contact-card" href="https://linkedin.com/in/gchiranjeevi" target="_blank" rel="noopener">
+            <div class="contact-card-header">
+              <div class="contact-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div class="label">LinkedIn</div>
+            </div>
+            <div class="value">/in/gchiranjeevi</div>
+          </a>
+          <a class="contact-card" href="https://github.com/chiranjeevigoli" target="_blank" rel="noopener">
+            <div class="contact-card-header">
+              <div class="contact-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </div>
+              <div class="label">GitHub</div>
+            </div>
+            <div class="value">@chiranjeevigoli</div>
+          </a>
+          <a class="contact-card" href="tel:+918341524554">
+            <div class="contact-card-header">
+              <div class="contact-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div class="label">Phone</div>
+            </div>
+            <div class="value">+91 83415 24554</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <span>© 2026 Goli Chiranjeevi</span>
+    <span>Built with intent, not a template.</span>
+  </footer>
+
+  <div id="palette-overlay">
+    <div id="palette" role="dialog" aria-label="Command palette">
+      <input type="text" id="paletteInput" placeholder="Jump to a section…" autocomplete="off">
+      <div id="palette-results"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
